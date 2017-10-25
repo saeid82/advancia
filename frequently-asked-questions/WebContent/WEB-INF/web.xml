@@ -11,18 +11,11 @@
   </welcome-file-list>
   <servlet>
     <servlet-name>faq</servlet-name>
-    <servlet-class>FaqServlet</servlet-class>
+    <servlet-class>servlets.FaqServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>faq</servlet-name>
-    <url-pattern>/faqservlet</url-pattern>
+    <url-pattern>/faq-servlet</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <servlet-name>dbConn</servlet-name>
-    <servlet-class>servlets.DbConnectionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>dbConn</servlet-name>
-    <url-pattern>/database_conn</url-pattern>
-  </servlet-mapping>
+
 </web-app>
