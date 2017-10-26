@@ -23,56 +23,52 @@
 </head>
 
 <body>
-	<jsp:getProperty property="*" name="guest"/>
-	
+	<jsp:setProperty property="*" name="guest"/>
+		
 	<%
 		if(guest.getName() == null ||
 		   guest.getSurname() == null ||
 		   guest.getEmail() == null){
 	%>
+			<form action="guestBookView.jsp" method="post">
+		
+				<p>Enter your name and surname and email to register in our GuestBook</p>
+		
+				<table>
+					<tr>
+						<td>First name</td>
+						<td>
+							<input type="text" name="name" />
+						</td>
+					</tr>
+			
+					<tr>
+						<td>Last name</td>
+						<td>
+							<input type="text" name="surname" />
+						</td>
+					</tr>
+			
+					<tr>
+						<td>email</td>
+						<td>
+							<input type="text" name="email" />
+						</td>
+					</tr>
+			
+					<tr>
+						<td colspan="2">
+							<input type="submit" name="Submit"/>
+						</td>
+					</tr>
+				</table>
 	
-	<form action="guestBookLogin.jsp" method="post">
-		<p>
-			<h2>Enter your name and surname and email to register in our GuestBook</h2>
-		</p>
-		<table>
-			<tr>
-				<td> First name</td>
-				<td>
-					<input type="text" name="firstName" />
-				</td>
-			</tr>
-			
-			<tr>
-				<td> First name</td>
-				<td>
-					<input type="text" name="sureName" />
-				</td>
-			</tr>
-			
-			<tr>
-				<td>E-mail</td>
-				<td>
-					<input type="text" name="email" />
-				</td>
-			</tr>
-			
-			<tr>
-				<td colspan="2">
-					<input type="submit" name="Submit"/>
-				</td>
-			</tr>
-		</table>
-	
-	</form>
-	<%
-		} // fine if
-		else{
-			guestData.addGuestToDb(guest);
-	%>
+			</form>
+
+	<% }else{
+		guestData.addGuestToDb(guest);
+	 %>
 		<jsp:forward page="guestBookView.jsp" />
-	<%
-		} // fine else
-	%>
+	<% } %>
 </body>
 </html>

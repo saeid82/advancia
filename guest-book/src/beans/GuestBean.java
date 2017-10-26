@@ -2,16 +2,16 @@ package beans;
 
 public class GuestBean {
 	
-	private String Name;
+	private String name;
 	private String surname;
 	private String email;
 	
 	
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 	public String getSurname() {
 		return surname;

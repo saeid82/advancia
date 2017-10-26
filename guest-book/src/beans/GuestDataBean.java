@@ -15,7 +15,7 @@ public class GuestDataBean {
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/guestBook";
 	private static final String USER_NAME = "root";
 	private static final String PASSWORD = "root";
-	private static final String QUERY_SELECT = "SELECT * FROM CLIENT";
+	private static final String QUERY_SELECT = "SELECT * FROM guestBook.CLIENT;";
 	
 	
 	public GuestDataBean() throws Exception {
@@ -40,8 +40,8 @@ public class GuestDataBean {
 	}
 	
 	public void addGuestToDb(GuestBean guest) throws SQLException {
-		String QUERY_INSERT = "INSERT INTO CLIENT(NAME , SURNAME , EMAIL)"
-				+ "VALUE("+guest.getName()+","+guest.getSurname()+","+guest.getEmail()+")";
+		String QUERY_INSERT = "INSERT INTO `guestBook`.`client` (`NAME`, `SURNAME`, `EMAIL`) VALUES('"+guest.getName()+"','"+guest.getSurname()+"','"+guest.getEmail()+"');";
+		
 		stat.executeUpdate(QUERY_INSERT);
 	}
 	
@@ -54,6 +54,6 @@ public class GuestDataBean {
 		}
 	}
 	
-	
+
 
 }

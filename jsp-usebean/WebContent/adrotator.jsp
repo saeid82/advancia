@@ -20,9 +20,9 @@
 	
 </head>
 <body>
-	<p class="big"> 
+	<p class="big"/> 
 		<h1> JSP UseBean example </h1>
-	</p>
+
 	
 	<p>
 		<a href='<%= rotator.getLink() %>' >

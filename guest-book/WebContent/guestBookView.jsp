@@ -31,8 +31,8 @@
 		<thead>
 			<tr>
 				<th style="width: 100px;">First name</th>
-				<th style="width: 100px;">Sure name</th>
-				<th style="width: 200px;">Email</th>
+				<th style="width: 100px;">Last name</th>
+				<th style="width: 200px;">E-mail</th>
 			</tr>
 		</thead>
 		
@@ -47,10 +47,8 @@
 			<tr>
 				<td><%= guest.getName() %></td>
 				<td><%= guest.getSurname() %> </td>
-				<td>
-					<a href="mailto: <%= guest.getEmail()%> ">
-					 <%= guest.getEmail() %> </a>
-				</td>
+				<td><%= guest.getEmail() %></td>
+
 			</tr>
 		<%
 			}
