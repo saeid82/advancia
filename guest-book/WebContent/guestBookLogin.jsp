@@ -30,7 +30,7 @@
 		   guest.getSurname() == null ||
 		   guest.getEmail() == null){
 	%>
-			<form action="guestBookView.jsp" method="post">
+			<form action="guestBookLogin.jsp" method="post">
 		
 				<p>Enter your name and surname and email to register in our GuestBook</p>
 		
