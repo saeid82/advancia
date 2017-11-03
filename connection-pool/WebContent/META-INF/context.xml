@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/connection-pool">
+	<WatchedResource>WEB_INF/web.xml</WatchedResource>
+	<ResourceLink global="jdbc/prova" name="jdbc/prova" type="javax.sql.DataSource"></ResourceLink>
+</Context>
